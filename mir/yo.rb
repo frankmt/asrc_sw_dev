@@ -2,7 +2,7 @@ guess_is_wrong = true
 while guess_is_wrong 
 user_name = ARGV.first #
 prompt = '>'
-lucky_number = 7
+lucky_number = rand(10) + 1
 puts "Yo #{user_name}."
 puts "You got 20 seconds to answer."
 puts "Your Lucky Number? "
@@ -18,6 +18,6 @@ else
 puts prompt
 puts "Second chance"
 
-end
 
+end
 end
