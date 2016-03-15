@@ -20,7 +20,7 @@ def print_none()
 end
 
 
-print_two("Zed","Shaw")
-print_two_again("Zed","Shaw")
+# print_two("Zed","Shaw")
+print_two_again("filename","Shaw")
 print_one("First!")
 print_none()

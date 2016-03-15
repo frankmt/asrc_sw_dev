@@ -20,7 +20,7 @@ five = 10 - 2 + 3 - 6
 puts "This should be five: #{five}"
 
 def secret_formula(started)
-  jelly_beans = started * 500
+  jelly_beans = started * 100
   jars = jelly_beans / 1000
   crates = jars / 100
   return jelly_beans, jars, crates
