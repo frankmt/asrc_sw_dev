@@ -1,0 +1,11 @@
+puts "you enter a dark room with two doors. Do you go through door #1 or door #2?"
+
+print "> "
+door = $stadin.gets.chomp
+
+if door == "1"
+	puts "there's a giant bear here eating a cheese cake. what do you do?"
+	puts "1. take the cake."
+	puts "2. scream at the bear."
+	
+	 
