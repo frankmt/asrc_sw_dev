@@ -8,7 +8,7 @@ puts "You got 20 seconds to answer."
 puts "Your Lucky Number? "
 puts prompt
 number = $stdin.gets.chomp
-kernel.at_exit == abort
+
 if number.to_i == lucky_number
 puts "Lucky Basterd"
 puts "your final guess was #{number}"
