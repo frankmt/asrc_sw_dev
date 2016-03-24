@@ -1,16 +1,9 @@
 i = 0
-index = []
-array = [0, 1, 2, 3, 4, 5, 6]
-array[0] = 'a'
-array[1] = 'b'
-array[2] = 'c'
-array[3] = 'd'
-array[4] = 'e'
-array[5] = 'f'
-array[6] = 'g'
+numbers = []
+array = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 while i < 7
   puts "At the top i is #{i}"
-  array.push(i)
+  numbers.push(i)
 
   i += 1
   puts "array now: ", array
