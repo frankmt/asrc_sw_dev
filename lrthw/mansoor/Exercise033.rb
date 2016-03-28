@@ -1,15 +1,12 @@
-i = 0
-letter = 'h'
 letters = []
+letter = ARGV[0]
 
-alphabet = ['h','g','f','e','d','c','b','a']
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+i = alphabet.index(letter)
+while i > 0
 
-while letter > '0'
-   puts "At the top the letter is #{letter}"
-     letters.push(letter)
-
-       i += 1
-       letter = alphabet[i]
-       puts "letters now: ", letters 
-       puts "At the bottom the letter is #{letter}"
+       i -= 1
+       letter =alphabet[i]
+       puts letter
+   
 end
