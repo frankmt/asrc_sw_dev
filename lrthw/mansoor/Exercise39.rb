@@ -4,14 +4,14 @@ states = {
 	'Florida' => 'FL',
 	'California' => 'CA',
 	'New York' => 'NY',
-	'Michigan' => 'MI'
+	'Michigan' => 'MI',
 }
 
 # create a basic set of states and some cities in them
 cities = {
 	'CA' => 'San Francisco',
 	'MI' => 'Detroit',
-	'FL' => 'Jacksonville'
+	'FL' => 'Jacksonville',
 }
 
 # add some more cities
