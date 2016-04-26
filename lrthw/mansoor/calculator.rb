@@ -1,6 +1,6 @@
 class Calculator
-  def add(number_1, number_2)
-    result = number_1 + number_2 
+  def add(number1,number2)
+    result = number1 + number2 
 	puts "#{result}" 
   end
   def subtract(number_1, number_2, number_3)

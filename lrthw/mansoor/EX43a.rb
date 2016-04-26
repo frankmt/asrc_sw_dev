@@ -1,11 +1,10 @@
-class Scene
-	def enter()
-	 puts "This scene is not yet configured. Subclass it and implement enter()."
-	 exit(1)
-	end
+class Scene 
+  def enter() # what this method do?
+    exit(1)
+  end
 end
 
-class Engine
+class Engine 
 
   def initialize(scene_map)
     @scene_map = scene_map
@@ -20,7 +19,7 @@ class Engine
       current_scene = @scene_map.next_scene(next_scene_name)
     end
 
-    # be sure to print out the last scene
+    # be sure to print the last scene
     current_scene.enter()
   end
 end
@@ -28,14 +27,14 @@ end
 class Death < Scene
 
   @@quips = [
-    "You died.  You kinda suck at this.",
+    "You died. You kinda suck at this",
      "Your mom would be proud...if she were smarter.",
      "Such a luser.",
      "I have a small puppy that's better at this."
   ]
 
   def enter()
-    puts @@quips[rand(0..(@@quips.length - 1))]
+    puts @@quips[rand(0..(@@quips.length - 1))] # 2. what is this?
     exit(1)
   end
 end
@@ -82,7 +81,7 @@ class CentralCorridor < Scene
       puts "The Gothon stops, tries not to laugh, then busts out laughing and can't move."
       puts "While he's laughing you run up and shoot him square in the head"
       puts "putting him down, then jump through the Weapon Armory door."
-      return 'laser_weapon_armory'
+      return 'finished'
 
     else
       puts "DOES NOT COMPUTE!"
@@ -101,7 +100,7 @@ class LaserWeaponArmory < Scene
     puts "and you need the code to get the bomb out.  If you get the code"
     puts "wrong 10 times then the lock closes forever and you can't"
     puts "get the bomb.  The code is 3 digits."
-    code = "555"
+    code = "#{rand(1..9)}#{rand(1..9)}#{rand(1..9)}"
     print "[keypad]> "
     guess = $stdin.gets.chomp
     guesses = 0
@@ -180,7 +179,7 @@ class EscapePod < Scene
     puts "but you don't have time to look.  There's 5 pods, which one"
     puts "do you take?"
 
-    good_pod = 4
+    good_pod = rand(1..5)
     print "[pod #]> "
     guess = $stdin.gets.chomp.to_i
 
@@ -238,4 +237,5 @@ end
 
 a_map = Map.new('central_corridor')
 a_game = Engine.new(a_map)
+a_laser = EscapePod.new()
 a_game.play()

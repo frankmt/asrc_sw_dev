@@ -1,10 +1,9 @@
 class Scene
-	def enter()
-	 puts "This scene is not yet configured. Subclass it and implement enter()."
-	 exit(1)
-	end
+  def enter()
+    puts "This scene is not yet configured. Subclass it and implement enter()."
+    exit(1)
+  end
 end
-
 class Engine
 
   def initialize(scene_map)
@@ -24,7 +23,6 @@ class Engine
     current_scene.enter()
   end
 end
-
 class Death < Scene
 
   @@quips = [
@@ -39,7 +37,6 @@ class Death < Scene
     exit(1)
   end
 end
-
 class CentralCorridor < Scene
 
   def enter()
@@ -90,7 +87,6 @@ class CentralCorridor < Scene
     end
   end
 end
-
 class LaserWeaponArmory < Scene
 
   def enter()
@@ -101,12 +97,12 @@ class LaserWeaponArmory < Scene
     puts "and you need the code to get the bomb out.  If you get the code"
     puts "wrong 10 times then the lock closes forever and you can't"
     puts "get the bomb.  The code is 3 digits."
-    code = "555"
+    code = "#{rand(1..9)}#{rand(1..9)}#{rand(1..9)}"
     print "[keypad]> "
     guess = $stdin.gets.chomp
     guesses = 0
 
-    while guess != code && guesses < 10
+    while guess != code && guesses < 9
       puts "BZZZZEDDD!"
       guesses += 1
       print "[keypad]> "
@@ -126,8 +122,7 @@ class LaserWeaponArmory < Scene
         return 'death'
     end
   end
-end
-
+end  
 
 class TheBridge < Scene
 
@@ -180,7 +175,7 @@ class EscapePod < Scene
     puts "but you don't have time to look.  There's 5 pods, which one"
     puts "do you take?"
 
-    good_pod = 4
+    good_pod = rand(1..5)
     print "[pod #]> "
     guess = $stdin.gets.chomp.to_i
 
@@ -209,7 +204,6 @@ class Finished < Scene
     puts "You won! Good job."
   end
 end
-
 class Map
   @@scenes = {
     'central_corridor' => CentralCorridor.new(),
