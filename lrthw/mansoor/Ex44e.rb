@@ -39,3 +39,9 @@ son = Child.new()
 son.implicit()
 son.override()
 son.altered()
+
+othe.implicit
+child override
+CHILD, BEFORE PARENT altered()
+other .altered()
+CHILD, After PARENT altered()
