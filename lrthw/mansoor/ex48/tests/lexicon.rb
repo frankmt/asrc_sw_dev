@@ -20,18 +20,20 @@ class Lexicon
   def self.scan(string)
   	#string = "1234"
 	words =	string.split
-	# ["1234"]
+	puts words
 	
 	result = words.map do |word|
 	  #is this a string?
 	  if word.to_i.to_s == word
-	  	["number", word.to_i]
+	  	["number", word.to_i]	
 	  else
-	    puts "**** #{word}"
 	    word_symbol = dict[word.to_sym]
-  	    word_string = word_symbol.to_s 
-	    [word_string, word]
-	    
+	    if word_symbol == nil
+	  	  ["error", word]
+	    else  
+  	      word_string = word_symbol.to_s
+	      [word_string, word]
+	    end
 	  end
 	end	
   	
