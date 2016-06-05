@@ -68,8 +68,7 @@ class CentralCorridor < Scene
 			puts "makes hi mfly into an insane rage and blast you repeatedly in the face until"
 			puts "you are dead. Then he eats you."
 			return 'death'
-			
-		elsif action == "dodge!"
+		elsif action == "dogne!"
 			puts "Like a world class boxer you dodge, weave, slip and sllide right"
 			puts "as the Gothon's blaster cranks a laser past your head."
 			puts "In the middle of your artful dodge your foot slips and you"
