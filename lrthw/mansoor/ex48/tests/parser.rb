@@ -14,10 +14,14 @@ class Sentence
     attr_reader :object
     
 	def peek(word_list)
+	# world_list = [['verb','run'],['direction','north']]
 		if word_list
 			word = word_list[0]
 			return word[0]
+			# ['verb', 'run']
+			puts word[0]
 		else
+		   
 			return nil
 		end
 	end
@@ -37,8 +41,12 @@ class Sentence
 		end
 	end
 	def skip(word_list, word_type)
+	# word_type = [['verb','run'],['direction','north']]
+	
 		while peek(word_list) == word_type
+		 puts "We get nil in peek"
 			match(word_list, word_type)
+		
 		end
 	end
 	def parse_verb(word_list)
