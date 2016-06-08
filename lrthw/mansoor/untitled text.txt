@@ -1,0 +1,20 @@
+rocket = "Hello"
+rabbit = "Bonjour"
+house = "Salam"
+house = rabbit
+rocket = house
+
+house #=> "Bonjour"
+
+What is house?
+
+apple = 1
+pear = "ciao"
+mango = "fruit"
+orange = 17
+mango = apple
+apple = pear
+apple = 5
+pear = mango
+
+what is pear?
