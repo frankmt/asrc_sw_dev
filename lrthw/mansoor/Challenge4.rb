@@ -1,6 +1,6 @@
 class Zoo
   attr_reader :name
-  
+
   def initialize(name)
   	@name = name
   end
@@ -13,13 +13,15 @@ class Zoo
 end
 
 zoo1 = Zoo.new("Melbourne")
-zoo1.welcome
 zoo2 = Zoo.new("San Diego")
-zoo2.welcome
 
+zoo1.welcome
 zoo1.enclosure("Lion", 7, "excellent")
 zoo1.enclosure("Polar Bear", 1, "bad")
+
+zoo2.welcome
 zoo2.enclosure("Tree Frog", 20, "good")
+
 # Expected output:
 # "Welcome to Melbourne Zoo!"
 # "Animal Type: Lion, Population: 7, Health: excellent."
