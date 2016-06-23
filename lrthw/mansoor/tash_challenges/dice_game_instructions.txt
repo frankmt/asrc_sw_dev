@@ -1,0 +1,45 @@
+Your challenge is to write a simple dice game.
+The game has two players who each roll a 6-sided dice.
+The player with the highest roll wins!
+
+You will make three classes:
+
+1. Player
+2. Game
+3. Dice
+
+The Dice class has the following methods:
+
+* new
+
+* roll
+Returns a random number between 1 and 6... just like real dice :)
+
+The Player class will have the following methods:
+
+* new(name)
+The method must take the player's name as an argument and store it in an instance variable.
+You will need it to print out the winner's name.
+It must also have a @latest_roll instance variable, which starts = 0.
+
+* take_turn
+The player rolls the dice.
+You can create a new instance of the dice class, and call its 'roll' method.
+The result is saved in the player's @latest_roll instance variable.
+
+The Game class has the following methods:
+
+* new(player1, player2)
+These are saved in instance variables, @player1 and @player2.
+
+* play
+Both players take a turn.
+
+* winner
+Whichever player has the highest @latest_roll will win.
+
+This should also output a sentence like:
+
+"Mansoor won the game with a high roll of 6!"
+
+Bonus: how will you handle a draw?
