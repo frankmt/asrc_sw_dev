@@ -10,6 +10,12 @@ class Zoo
   def enclosure(animal, population, health)
     puts "Animal Type: #{animal}, Population: #{population}, Health: #{health}"
   end
+  def welcome
+    puts "Welcome to San Diego"
+  end
+  def enclosure(animal, population, health)
+    puts "Animal Type: #{animal}, Population: #{population}, Health: #{health}"
+  end
 end
 
 zoo1 = Zoo.new("Melbourne")
@@ -21,6 +27,7 @@ zoo1.enclosure("Polar Bear", 1, "bad")
 
 zoo2.welcome
 zoo2.enclosure("Tree Frog", 20, "good")
+
 
 # Expected output:
 # "Welcome to Melbourne Zoo!"
