@@ -1,6 +1,6 @@
 require_relative "./dice.rb"
 class Player
-  attr_reader :name
+  attr_reader = :name, :latest_roll
 
   def initialize(name)
   @name = name
