@@ -13,13 +13,16 @@ class Game
   def winner
    puts "#{@player1.name} #{@player1.latest_roll}"
    puts "#{@player2.name} #{@player2.latest_roll}"
+
     if @player1.latest_roll >= @player2.latest_roll
-      winner = @player1
+      puts "#{@player1} won the game!"
+    else if @player1.latest_roll <= @player2.latest_roll
+      puts "#{@player2} won the game!"
     end
-    if @player1.latest_roll <= @player2.latest_roll
-      winner = @player2
+    
+    if ## draw condition
+      ## draw behavior
     end
-    puts "#{winner.name} won the game"
   end
 end
 
