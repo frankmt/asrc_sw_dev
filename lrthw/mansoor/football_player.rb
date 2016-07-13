@@ -10,24 +10,19 @@ attr_accessor :name, :number, :position, :goals
   end
 
   	def score_goal(number)
-  	   	puts "#{Mesut Ozil.name} #{10.number} #{Midfielder.position}"
-  	   			ozil.score_goal = 0
+  	   	puts "#{@name}, #{@number}, #{@position} scored #{number} goals"
+  	   			@goals += number
     end
-     
-    def score_goal(number)
-  	   	puts "#{Mesut Ozil.name} #{10.number} #{Midfielder.position}"
-  	   			attack.ozil.score_goal = +1
-     end
-     
-  	 def total_goals
-  	  puts "#{Mesut Ozil.name} #{10.number} #{Midfielder.position}"
-  	  		ozil.total_goals = 3
-  	 end
+    
+  	def total_goals
+  	  puts "#{@name}, #{@number}, #{@position} scored total #{@goals}"
+  	end
 end
 
 ozil = Player.new("Mesut Ozil", 10, "Attacking Midfielder")
 
-ozil.score_goal(0)
 ozil.score_goal(1)
+ozil.score_goal(1)
+ozil.score_goal(100)
 
 ozil.total_goals
