@@ -13,20 +13,19 @@ class Game
   def winner
    puts "#{@player1.name} #{@player1.latest_roll}"
    puts "#{@player2.name} #{@player2.latest_roll}"
-    if @player1.latest_roll >= @player2.latest_roll
-      winner = @player1
+
+
+    if @player1.latest_roll > @player2.latest_roll
+      puts("#{@player1.name} Won The Game!")
+    else if @player1.latest_roll < @player2.latest_roll
+      puts("#{@player2.name} Won The Game!")
     end
-    if @player1.latest_roll <= @player2.latest_roll
-      winner = @player2
-    end
-    puts "#{winner.name} won the game"
-  end
-  def draw
-    puts "#{@player1.name} #{@player1.latest_roll}"
-    puts "#{@player2.name} #{@player2.latest_roll}"
+
     if @player1.latest_roll == @player2.latest_roll
+      puts "The match is draw"
     end
-    puts "The match is draw"
+  end
+
   end
 end
 
@@ -36,4 +35,3 @@ mansoor_ali = Player.new("Mansoor Ali")
 game = Game.new(mesut_ozil, mansoor_ali)
 game.play
 game.winner
-game.draw
