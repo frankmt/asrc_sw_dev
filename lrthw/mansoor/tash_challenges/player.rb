@@ -4,25 +4,16 @@ class Player
 
   def initialize(name)
     @name = name
-    @latest_roll = 0
+    @total_roll = 0
   end
 
   def take_turn
     dice = Dice.new
-    @latest_roll = dice.roll
-    # puts "#{@name}, #{@latest_roll}"
+    @total_roll += dice.roll
   end
 
-  def latest_roll
-    @latest_roll
+  def total_roll
+    @total_roll
   end
 
 end
-# mesut_ozil = Player.new("Mesut Ozil")
-# mansoor_ali = Player.new("Mansoor Ali")
-#
-# mesut_ozil.take_turn
-# puts mesut_ozil.latest_roll
-#
-# mansoor.take_turn
-# puts mansoor_ali.latest_roll
