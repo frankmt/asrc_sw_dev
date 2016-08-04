@@ -25,8 +25,6 @@ class Game
       puts "The match is draw"
     end
   end
-
-  end
 end
 
 mesut_ozil = Player.new("Mesut Ozil")
