@@ -8,9 +8,11 @@ We need to become a bank of the future. To do this, we will need to offer our cu
 
 I believe you are the man to build this system for us. Below I have included instructions for how I want our customers to be able to use this system.
 
+Our customers should be able to access their banking system via the Mac OS X application 'Terminal'.
+
 ### Requirements
 
-When I run the program `commonwealth_bank.rb`, I should be greeted with the following:
+When I run the program `ruby commonwealth_bank.rb`, I should be greeted with the following:
 
 `Thank you for choosing Commonwealth Bank.`
 
