@@ -70,6 +70,8 @@ The customer enters the account name.
 
 `How much do you wish to transfer?`
 
+The customer enters a number.
+
 `You have transferred $<number> to <name>.`
 
 If you don't have enough money, the customer sees the following error message:
