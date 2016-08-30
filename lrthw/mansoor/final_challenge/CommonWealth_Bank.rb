@@ -9,19 +9,18 @@ end
 def display
    puts "Thank you for choosing Commonwealth Bank.
         Please enter your name:"
-     @name = gets.chomp
+      @name = gets.chomp
    puts "please enter your opening_balance:"
-  if @account_balance == "0"
-    puts main_menu
-  if @account_balance.is_a? Numeric
-    puts  main_menu
-else @account_balance = @account_balance.to_i
-    if @account_balance.is_a? String
-    puts "Please enter a number."
-  else
-    puts main_menu
-  end
-end
+      @account_balance = gets.chomp
+   if @account_balance == "0"
+        puts main_menu
+    elsif @account_balance.is_a? Numeric
+    @account_balance = @account_balance.to_i
+   elsif @account_balance.is_a? String
+       puts "Please enter a number."
+   else
+       puts main_menu
+   end
 end
 
 def main_menu
