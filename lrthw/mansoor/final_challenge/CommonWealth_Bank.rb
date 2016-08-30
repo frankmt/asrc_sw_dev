@@ -12,9 +12,10 @@ def display
       @name = gets.chomp
    puts "please enter your opening_balance:"
       @account_balance = gets.chomp
+      puts @account_balance.class
    if @account_balance == "0"
         puts main_menu
-    elsif @account_balance.is_a? Numeric
+   elsif @account_balance.is_a? Numeric
     @account_balance = @account_balance.to_i
    elsif @account_balance.is_a? String
        puts "Please enter a number."
