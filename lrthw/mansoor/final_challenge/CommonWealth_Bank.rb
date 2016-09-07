@@ -32,47 +32,52 @@ def main_menu
         3. Transfer to another account.
         4. View bank statement."
 
-     input = gets.chomp
+     option = gets.chomp
 
-# #    case option
-#    when 1
-#         withdrawl_funds
-#    when 2
-#         deposit_funds
-#    when 3
-#         transfer_to_another_account
-#     when 4
-#         view_bank_statement
-#    else
-#         exit
-#    end
-# end
-#
-# case option
-# when 1
-#       @account_balance -= amount
-#       puts how much would you like to withdraw?
-#       "You have withdrawn $#{amount}: your balance is now $$#{amount}"
-#
-#       account_balance > amount
-#       puts "you cannot withdrawl more than your available balance of $#{amount}".
+case option
+    when '1'
+        withdrawl_funds
+    when '2'
+        deposit_funds
+    when '3'
+        transfer_to_another_account
+    when '4'
+        view_bank_statement
+   else
+        exit
+   end
 
-# when 2
+def withdrawl_funds
+
+      @account_balance -= amount
+      puts how much would you like to withdraw?
+      "You have withdrawn $#{amount}: your balance is now $$#{amount}"
+
+      account_balance > amount
+      puts "you cannot withdrawl more than your available balance of $#{amount}".
+end
+
+# def deposit_funds
+#
 #      @account_balance += amount
 #      puts how much would you like to deposit?
 #      "You have deposit $#{amount}: your balance is now $$#{amount}"
 # else
 #      incorrect_name
+# end
 #
-# when 3
+# def transfer_to_another_account
+#
 #      @account_balance -= amount
 #      puts how much would you like to transfer?
 #      "You have transfer $#{amount} to to #{name}: your balance is now $$#{amount}"
 # else
 #      account_balance > amount
 #      puts "I'm sprry. you cannot transfer more than your available balance of $#{amount}".
+# end
 #
-# when 4
+# def view_bank_statement
+#
 #       print
 #       Bank Account Statement for Tash Postolovski
 #       ===========================================
@@ -88,11 +93,12 @@ def main_menu
 # Natasha Postolovski
 # Chief Technology Officer,
 # Commonwealth Bank of Australia
+#
+  end
 end
 
 def incorrect_name
     puts "Access Denied: incorrect Name"
     exit
 end
-account = Account.new
-display
+account = Account.new(display, withdrawl_funds)
