@@ -79,12 +79,12 @@ class Account
        puts "how much would you like to transfer?"
        @amount = gets.chomp
        @amount = @amount.to_i
-       puts "Which account do you want to transfer to?"
-       @other_account = gets.chomp
     if @amount > @account_balance
         puts "I'm sorry. you can not transfer more than your available balance of $#{@account_balance}"
-    else
-      @account_balance -= @amount
+    elsif @amount <= @account_balance
+        puts "Which account do you want to transfer to?"
+          @other_account = gets.chomp
+          @account_balance -= @amount
         "You have transfer $#{@amount} to #{@other_account} account: your balance is now $#{@account_balance}"
     end
   end
