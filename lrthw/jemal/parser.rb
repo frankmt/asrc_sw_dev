@@ -90,3 +90,4 @@ def parse_sentence(word_list)
 	
 	return Sentence.new(subj, verb, obj)
 end
+
